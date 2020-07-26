@@ -64,8 +64,10 @@
         function submitPin(){
             if(document.getElementById('inputDisplay').value == document.getElementById('generatorDisplay').value){
                 document.getElementById('matched').style.display = "block";
+                document.getElementById("notMatched").style.display = "none";
             } else {
                 document.getElementById("notMatched").style.display = "block";
+                document.getElementById('matched').style.display = "none";
             }            
         }
         // Input number function
@@ -76,7 +78,7 @@
         function clean(){
             document.getElementById('inputDisplay').value = '';
         }
-        // backspace (need to fix)
+        // backspace 
         function back(){
             let value = document.getElementById('inputDisplay').value;
             document.getElementById('inputDisplay').value = value.substr(0, value.length -1);
